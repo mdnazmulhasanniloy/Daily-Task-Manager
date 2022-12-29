@@ -1,0 +1,44 @@
+.NaveLink::before{
+    content: "";
+    height: 3px;
+    width: 100%;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background:  white;
+    transition: all 0.5s ease;
+}
+.NaveLink:before{
+    opacity: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform 0.5s ease ;
+    -webkit-transition:transform 0.5s ease ;
+    -moz-transition:transform 0.5s ease ;
+    -ms-transition:transform 0.5s ease ;
+    -o-transition:transform 0.5s ease ;
+}
+
+.NaveLink:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.active::after, .active::before{
+    content: "";
+    height: 3px;
+    width: 75% !important ;
+    
+    bottom: 0;
+    position: absolute;
+    background:  white;
+}
+nav{
+    background: none !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -ms-border-radius: 0px !important;
+    -o-border-radius: 0px !important;
+}
